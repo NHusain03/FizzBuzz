@@ -10,20 +10,15 @@ def fizzBuzzLogic(rules, max):
 
         if x % 3 == 0 and "3" in rules:
             out_list.append("Fizz")
-
         if x % 5 == 0 and "5" in rules:
             out_list.append("Buzz")
-
         if x % 7 == 0 and "7" in rules:
             out_list.append("Bang")
-
         if x % 11 == 0 and "11" in rules:
             out_list.clear()
             out_list.append("Bong")
-
         if x % 13 == 0 and "13" in rules:
             found = False
-
             for i in range(len(out_list)):
                 if out_list[i][0] == "B":
                     out_list.insert(i, "Fezz")
@@ -33,17 +28,14 @@ def fizzBuzzLogic(rules, max):
             if not found:
                 out_list.append("Fezz")
 
-
         if x % 17 == 0 and "17" in rules:
             out_list.reverse()
-
         if not out_list:
             out_list.append(str(x))
 
         out_string = ""
         for element in out_list:
             out_string += element
-
         print(out_string)
 
 # Press the green button in the gutter to run the script.
